@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  dash-server:
+    build: ./dash-server
+    ports:
+      - "3000:3000"
+    networks:
+      - dash-network
+
+  dash-client:
+    build: ./dash-client
+    ports:
+      - "5173:5173"
+    networks:
+      - dash-network
+    depends_on:
+      - dash-server
+
+networks:
+  dash-network:
+    driver: bridge
