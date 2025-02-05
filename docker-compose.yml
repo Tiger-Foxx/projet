@@ -7,6 +7,9 @@ services:
       - "3000:3000"
     networks:
       - dash-network
+    cap_add:
+      - NET_ADMIN  # Ajoute les privilèges réseau
+    privileged: true  # <-- Ajoute cette ligne
 
   dash-client:
     build: ./dash-client
@@ -14,6 +17,9 @@ services:
       - "5173:5173"
     networks:
       - dash-network
+    cap_add:
+      - NET_ADMIN  # Ajoute les privilèges réseau
+    privileged: true  # <-- Ajoute cette ligne
     depends_on:
       - dash-server
 
