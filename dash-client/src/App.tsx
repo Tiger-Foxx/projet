@@ -1,9 +1,9 @@
-import VideoPlayer from "./components/VideoPlayer.jsx";
+import VideoPlayer from "./components/VideoPlayer.tsx";
 
 function App() {
   return (
     <div>
-      <VideoPlayer />
+      <VideoPlayer></VideoPlayer>
     </div>
   );
 }

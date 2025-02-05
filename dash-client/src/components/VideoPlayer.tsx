@@ -7,7 +7,7 @@ const VideoPlayer = () => {
   useEffect(() => {
     if (videoRef.current) {
       const player = dashjs.MediaPlayer().create();
-      player.initialize(videoRef.current, "http://192.168.100.208:3000/manifest.mpd", true);
+        player.initialize(videoRef.current, "http://localhost:3000/manifest.mpd", true);
     }
   }, []);
 
